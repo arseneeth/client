@@ -1,6 +1,6 @@
 # XTH Node
 
-A Dothereum testnet node implementation written in Rust build with Parity Substrate.
+A Dothereum testnet node implementation written in Rust built with Parity Substrate.
 
 ### Building from source
 
