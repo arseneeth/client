@@ -11,13 +11,13 @@ pub use substrate_cli::{VersionInfo, IntoExit, error};
 
 fn run() -> cli::error::Result<()> {
 	let version = VersionInfo {
-		name: "Substrate Node",
+		name: "Dothereum Testnet",
 		commit: env!("VERGEN_SHA_SHORT"),
 		version: env!("CARGO_PKG_VERSION"),
 		executable_name: "xth-net",
-		author: "soc1c",
-		description: "xth-net",
-		support_url: "support.anonymous.an",
+		author: "soc1c, xthereum",
+		description: "Dothereum Testnet",
+		support_url: "dothereum.net",
 	};
 	cli::run(::std::env::args(), cli::Exit, version)
 }
