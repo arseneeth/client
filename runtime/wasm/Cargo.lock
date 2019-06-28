@@ -3346,8 +3346,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "xth-net-runtime"
-version = "1.0.0"
+name = "xth-runtime"
+version = "0.1.0"
 dependencies = [
  "parity-codec 3.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3373,10 +3373,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "xth-net-runtime-wasm"
-version = "1.0.0"
+name = "xth-runtime-wasm"
+version = "0.1.0"
 dependencies = [
- "xth-net-runtime 1.0.0",
+ "xth-runtime 0.1.0",
 ]
 
 [[package]]

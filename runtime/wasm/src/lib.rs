@@ -2,4 +2,4 @@
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
-pub use xth_net_runtime::*;
+pub use xth_runtime::*;

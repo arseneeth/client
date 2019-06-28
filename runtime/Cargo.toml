@@ -144,7 +144,7 @@ package = 'sr-version'
 rev = 'bb68456966bf9d767651773dbaadd6787bce1884'
 
 [package]
-authors = ['Parity Technologies <admin@parity.io>']
+authors = ['Dothereum <admin@dothereum.net>']
 edition = '2018'
-name = 'xth-net-runtime'
-version = '1.0.0'
+name = 'xth-runtime'
+version = '0.1.0'
