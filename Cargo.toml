@@ -1,5 +1,5 @@
 [[bin]]
-name = 'xth-net'
+name = 'xth'
 path = 'src/main.rs'
 
 [dependencies]
@@ -37,7 +37,7 @@ git = 'https://github.com/paritytech/substrate.git'
 package = 'substrate-network'
 rev = 'bb68456966bf9d767651773dbaadd6787bce1884'
 
-[dependencies.xth-net-runtime]
+[dependencies.xth-runtime]
 path = 'runtime'
 
 [dependencies.primitives]
@@ -71,10 +71,10 @@ package = 'substrate-transaction-pool'
 rev = 'bb68456966bf9d767651773dbaadd6787bce1884'
 
 [package]
-authors = ['soc1c <xth@soc1.cz>']
+authors = ['Dothereum <admin@dothereum.net>']
 build = 'build.rs'
 edition = '2018'
-name = 'xth-net'
+name = 'xth'
 version = '0.1.0'
 [profile.release]
 panic = 'unwind'
