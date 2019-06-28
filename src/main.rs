@@ -14,7 +14,7 @@ fn run() -> cli::error::Result<()> {
 		name: "Dothereum Testnet",
 		commit: env!("VERGEN_SHA_SHORT"),
 		version: env!("CARGO_PKG_VERSION"),
-		executable_name: "xth-net",
+		executable_name: "xth",
 		author: "soc1c, xthereum",
 		description: "Dothereum Testnet",
 		support_url: "dothereum.net",
