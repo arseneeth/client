@@ -22,6 +22,8 @@ pub enum Alternative {
 	Development,
 	/// Whatever the current runtime is, with simple Alice/Bob auths.
 	LocalTestnet,
+	/// Whatever the current runtime is, with simple Alice/Bob auths.
+	DothereumTestnet,
 }
 
 fn authority_key(s: &str) -> AuthorityId {
@@ -41,7 +43,7 @@ impl Alternative {
 	pub(crate) fn load(self) -> Result<ChainSpec, String> {
 		Ok(match self {
 			Alternative::Development => ChainSpec::from_genesis(
-				"Development",
+				"Development Network",
 				"dev",
 				|| testnet_genesis(vec![
 					authority_key("Alice")
@@ -78,13 +80,36 @@ impl Alternative {
 				None,
 				None
 			),
+			Alternative::DothereumTestnet => ChainSpec::from_genesis(
+				"Dothereum Testnet",
+				"xth",
+				|| testnet_genesis(vec![
+					authority_key("Alice"),
+					authority_key("Bob"),
+				], vec![
+					account_key("Alice"),
+					account_key("Bob"),
+					account_key("Charlie"),
+					account_key("Dave"),
+					account_key("Eve"),
+					account_key("Ferdie"),
+				],
+					account_key("Alice"),
+				),
+				vec![],
+				None,
+				None,
+				None,
+				None
+			),
 		})
 	}
 
 	pub(crate) fn from(s: &str) -> Option<Self> {
 		match s {
 			"dev" => Some(Alternative::Development),
-			"" | "local" => Some(Alternative::LocalTestnet),
+			"local" => Some(Alternative::LocalTestnet),
+			"" => Some(Alternative::DothereumTestnet),
 			_ => None,
 		}
 	}
